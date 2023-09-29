@@ -1,0 +1,35 @@
+{
+  "name": "caretime-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for the CareTime app",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"No tests specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TravikSkoot/CareTime.git"
+  },
+  "keywords": [
+    "senior-care",
+    "frontend",
+    "react",
+    "user-interface",
+    "healthcare",
+    "web-app",
+    "responsive-design",
+    "client-side",
+    "service",
+    "scheduling",
+    "management",
+    "time-tracking"
+  ],
+  "author": "Thiemo Küpper",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/TravikSkoot/CareTime/issues"
+  },
+  "homepage": "https://github.com/TravikSkoot/CareTime#readme"
+}
