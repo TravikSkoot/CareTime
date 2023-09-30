@@ -1,44 +1,87 @@
-# CareTime
+# CareTime - Seniorenserviceverwaltung
 
-Willkommen zum CareTime-Projekt!
+Willkommen bei CareTime, einer Anwendung zur Verwaltung von Arbeitsstunden im Seniorenservice. Diese Anwendung bietet eine einfache Möglichkeit, Arbeitsstunden für Mitarbeiter im Seniorenservice zu erfassen und zu verwalten.
 
-## Über das Projekt
+## Inhaltsverzeichnis
 
-CareTime ist eine Anwendung zur Verwaltung von Arbeitsstunden und Kundeninformationen. Diese Anwendung wurde entwickelt, um die Arbeit von Mitarbeitern in der Seniorenbetreuung zu erleichtern. Sie ermöglicht das Protokollieren von Arbeitsstunden, das Hinzufügen neuer Kunden und die Verwaltung von Informationen über Kunden und Mitarbeiter.
+- [Installation](#installation)
+- [Verwendung](#verwendung)
+- [API-Endpunkte](#api-endpunkte)
+- [Contributing](#beitragen)
+- [Lizenz](#lizenz)
 
-## Funktionen
+## Installation
 
-- Benutzeranmeldung und -registrierung
-- Hinzufügen und Verwalten von Arbeitsstunden
-- Hinzufügen und Verwalten von Kundeninformationen
-- Exportieren von Daten in eine Excel-Tabelle
-- ...
-
-## Ordnerstruktur
-
-Die Projektordnerstruktur ist wie folgt aufgebaut:
-
-- `backend/`: Enthält den Node.js-Server und die API-Logik.
-  - `src/`: Enthält den Server-Code.
-    - `controllers/`: Controller für verschiedene Routen.
-    - `models/`: Datenbankmodelle.
-    - `routes/`: API-Routen.
-    - `index.js`: Hauptserverdatei.
-  - `package.json`: Abhängigkeiten und Skripte für den Backend-Server.
-- `frontend/`: Enthält den Frontend-Code.
-  - `public/`: Öffentliche Ressourcen und HTML-Dateien.
-  - `src/`: Enthält den Frontend-Code.
-    - `components/`: Wiederverwendbare Komponenten.
-    - `views/`: Ansichten und Seiten.
-    - `App.js`: Hauptkomponente.
-    - `index.js`: Einstiegspunkt der Frontend-Anwendung.
-  - `package.json`: Abhängigkeiten und Skripte für das Frontend.
-
-## Installation und Verwendung
-
-Um das Projekt lokal auszuführen, führe die folgenden Schritte aus:
+Um CareTime lokal auszuführen, führen Sie die folgenden Schritte aus:
 
 1. Klonen Sie das Repository:
 
    ```bash
    git clone https://github.com/TravikSkoot/CareTime.git
+   ```
+
+2. Wechseln Sie in das Backend-Verzeichnis:
+
+   ```bash
+   cd CareTime/backend
+   ```
+
+3. Installieren Sie die Abhängigkeiten:
+
+   ```bash
+   npm install
+   ```
+
+4. Starten Sie den Backend-Server:
+
+   ```bash
+   node server.js
+   ```
+
+5. Wechseln Sie in das Frontend-Verzeichnis:
+
+   ```bash
+   cd ../frontend
+   ```
+
+6. Installieren Sie die Frontend-Abhängigkeiten:
+
+   ```bash
+   npm install
+   ```
+
+7. Starten Sie die Frontend-Anwendung:
+
+   ```bash
+   npm start
+   ```
+
+Die Anwendung ist jetzt unter [http://localhost:3000](http://localhost:3000) verfügbar.
+
+## Verwendung
+
+Um die Anwendung zu verwenden, öffnen Sie sie in Ihrem Webbrowser. Hier können Sie sich einloggen oder registrieren, Arbeitsstunden hinzufügen, aktualisieren und löschen, sowie Daten exportieren.
+
+## API-Endpunkte
+
+Die API bietet verschiedene Endpunkte für die Verwaltung von Arbeitsstunden. Hier sind einige Beispiele:
+
+- `POST /api/einloggen`: Benutzeranmeldung
+- `POST /api/registrieren`: Benutzerregistrierung
+- `POST /api/arbeitsstunden`: Neue Arbeitsstunde hinzufügen
+- `GET /api/arbeitsstunden`: Alle Arbeitsstunden abrufen
+- `PUT /api/arbeitsstunden/:id`: Arbeitsstunde aktualisieren
+- `DELETE /api/arbeitsstunden/:id`: Arbeitsstunde löschen
+- `POST /api/exportieren`: Exportieren der Daten in eine Excel-Tabelle
+
+## Beitragen
+
+Wir freuen uns über Beiträge zur Weiterentwicklung von CareTime. Bitte lesen Sie die [Beitragungsrichtlinien](CONTRIBUTING.md) für weitere Informationen.
+
+## Lizenz
+
+Dieses Projekt ist unter der [GNU General Public License (GPL)](LICENSE.md) lizenziert. Lesen Sie die Lizenzdatei für weitere Details.
+
+---
+
+© 2023 Thiemo Küpper
