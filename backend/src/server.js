@@ -1,55 +1,74 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
+const arbeitsstundenRoutes = require('./routes/arbeitsstundenRoutes');
+const Arbeitsstunde = require('./models/arbeitsstunde');
 
-// Dummy-Datenbank
-let hoursDB = [];
-let usersDB = [];
+// Verbindung zu MongoDB
+mongoose.connect('mongodb://127.0.0.1:27017/CareTime', { 
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('Erfolgreich mit der Datenbank verbunden'))
+.catch(err => console.log('Verbindungsfehler:', err));
 
-app.use(express.json()); // for parsing application/json
+// Middleware, um JSON-Anfragen zu verarbeiten
+app.use(express.json());
 
-// Login
-app.post('/api/login', (req, res) => {
+// Router einbinden
+app.use('/api/arbeitsstunden', arbeitsstundenRoutes);
+
+// Benutzeranmeldung
+app.post('/api/einloggen', (req, res) => {
   // Logik für die Benutzeranmeldung
-  res.json({ message: 'Logged in' });
+  res.json({ message: 'Eingeloggt' });
 });
 
-// Registrierung
-app.post('/api/register', (req, res) => {
+// Benutzerregistrierung
+app.post('/api/registrieren', (req, res) => {
   // Logik für die Benutzerregistrierung
-  res.json({ message: 'Registered' });
+  res.json({ message: 'Registriert' });
 });
 
 // Neue Arbeitsstunde hinzufügen
-app.post('/api/hours', (req, res) => {
-  // Logik zum Hinzufügen einer neuen Arbeitsstunde
-  res.json({ message: 'Hour added' });
+app.post('/api/arbeitsstunden', (req, res) => {
+  const neueArbeitsstunde = new Arbeitsstunde({
+    datum: req.body.datum,
+    zeitStunden: req.body.zeitStunden,
+    kunden: req.body.kunden,
+    mitarbeiterId: req.body.mitarbeiterId
+  });
+
+  neueArbeitsstunde.save()
+    .then(() => res.json({ message: 'Neue Arbeitsstunde erfolgreich hinzugefügt.' }))
+    .catch(err => res.status(400).json({ message: 'Fehler beim Hinzufügen der Arbeitsstunde', error: err }));
 });
 
 // Alle Arbeitsstunden abrufen
-app.get('/api/hours', (req, res) => {
+app.get('/api/arbeitsstunden', (req, res) => {
   // Logik zum Abrufen aller Arbeitsstunden
-  res.json(hoursDB);
 });
 
 // Arbeitsstunde aktualisieren
-app.put('/api/hours/:id', (req, res) => {
+app.put('/api/arbeitsstunden/:id', (req, res) => {
   // Logik zum Aktualisieren einer Arbeitsstunde
   res.json({ message: 'Hour updated' });
 });
 
 // Arbeitsstunde löschen
-app.delete('/api/hours/:id', (req, res) => {
+app.delete('/api/arbeitsstunden/:id', (req, res) => {
   // Logik zum Löschen einer Arbeitsstunde
   res.json({ message: 'Hour deleted' });
 });
 
 // Exportieren der Daten
-app.post('/api/export', (req, res) => {
+app.post('/api/exportieren', (req, res) => {
   // Logik zum Exportieren der Daten in eine Excel-Tabelle
   res.json({ message: 'Data exported' });
 });
 
+// Server starten
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
+  console.log(`Server running at http://127.0.0.1:${port}/`);
 });
