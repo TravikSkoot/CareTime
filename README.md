@@ -8,11 +8,25 @@ Willkommen bei CareTime, einer Anwendung zur Verwaltung von Arbeitsstunden im Se
 
 ## Inhaltsverzeichnis
 
-- [Installation](#installation)
+- [Features](#features)
 - [Verwendung](#verwendung)
+- [Installation](#installation)
 - [API-Endpunkte](#api-endpunkte)
 - [Contributing](#beitragen)
 - [Lizenz](#lizenz)
+
+
+
+## Features
+
+- **Kundenverwaltung**: Hinzufügen, Bearbeiten und Löschen von Kundendaten.
+- **Automatische Berechnungen**: Berechnung der Gesamtarbeitszeit, eventuell sogar der Bezahlung.
+- **Benachrichtigungen**: Erinnerungen für das Eintragen von Arbeitsstunden.
+- **Berichte**: Monatliche oder wöchentliche Berichte, die automatisch generiert werden.
+
+## Verwendung
+
+Um die Anwendung zu verwenden, öffnen Sie sie in Ihrem Webbrowser. Hier können Sie sich einloggen oder registrieren, Arbeitsstunden hinzufügen, aktualisieren und löschen, sowie Daten exportieren.
 
 ## Installation
 
@@ -61,10 +75,6 @@ Um CareTime lokal auszuführen, führen Sie die folgenden Schritte aus:
    ```
 
 Die Anwendung ist jetzt unter [http://localhost:3000](http://localhost:3000) verfügbar.
-
-## Verwendung
-
-Um die Anwendung zu verwenden, öffnen Sie sie in Ihrem Webbrowser. Hier können Sie sich einloggen oder registrieren, Arbeitsstunden hinzufügen, aktualisieren und löschen, sowie Daten exportieren.
 
 ## API-Endpunkte
 

@@ -18,9 +18,10 @@ Das Frontend von CareTime bietet eine Benutzeroberfläche für die Interaktion m
 
 ## Features
 
-- Benutzeranmeldung
-- Datenvisualisierung
-- Echtzeitaktualisierungen
+- **Kundenverwaltung**: Hinzufügen, Bearbeiten und Löschen von Kundendaten.
+- **Automatische Berechnungen**: Berechnung der Gesamtarbeitszeit, eventuell sogar der Bezahlung.
+- **Benachrichtigungen**: Erinnerungen für das Eintragen von Arbeitsstunden.
+- **Berichte**: Monatliche oder wöchentliche Berichte, die automatisch generiert werden.
 
 ## Beitragende
 
