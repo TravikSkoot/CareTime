@@ -39,7 +39,7 @@ Um CareTime lokal auszuführen, führen Sie die folgenden Schritte aus:
 4. Starten Sie den Backend-Server:
 
    ```bash
-   node server.js
+   node index.js
    ```
 
 5. Wechseln Sie in das Frontend-Verzeichnis:
@@ -80,11 +80,11 @@ Die API bietet verschiedene Endpunkte für die Verwaltung von Arbeitsstunden. Hi
 
 ## Beitragen
 
-Wir freuen uns über Beiträge zur Weiterentwicklung von CareTime. Bitte lesen Sie die [Beitragungsrichtlinien](CONTRIBUTING.md) für weitere Informationen.
+Wir begrüßen Beitragende! Wenn Sie zur Weiterentwicklung von CareTime beitragen möchten, lesen Sie bitte unsere [Contributing-Anleitung](CONTRIBUTING.md) für Details dazu, wie Sie sich beteiligen können.
 
 ## Lizenz
 
-Dieses Projekt ist unter der [GNU General Public License (GPL)](LICENSE.md) lizenziert. Lesen Sie die Lizenzdatei für weitere Details.
+Dieses Projekt ist unter der GNU General Public License (GPL-3.0) lizenziert. Weitere Informationen finden Sie in der [Lizenzdatei](LICENSE).
 
 ---
 
