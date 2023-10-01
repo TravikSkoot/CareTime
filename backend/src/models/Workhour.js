@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Arbeitsstunden Schema
 const arbeitsstundenSchema = new mongoose.Schema({
   datum: {
     type: Date,
@@ -21,6 +22,7 @@ const arbeitsstundenSchema = new mongoose.Schema({
   }
 });
 
+// Arbeitsstunden-Modell erstellen
 const Arbeitsstunde = mongoose.model('Arbeitsstunde', arbeitsstundenSchema);
 
 module.exports = Arbeitsstunde;

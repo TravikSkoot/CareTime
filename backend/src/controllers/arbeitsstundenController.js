@@ -1,4 +1,4 @@
-const Arbeitsstunde = require('../models/arbeitsstunde');
+const Arbeitsstunde = require('../models/Workhour');
 
 // Hinzufügen einer neuen Arbeitsstunde
 exports.hinzufuegen = async (req, res) => {

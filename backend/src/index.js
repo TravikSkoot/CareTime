@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
 const arbeitsstundenRoutes = require('./routes/arbeitsstundenRoutes');
-const Arbeitsstunde = require('./models/arbeitsstunde');
+const Arbeitsstunde = require('./models/Workhour');
 
 // Verbindung zu MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/CareTime', { 

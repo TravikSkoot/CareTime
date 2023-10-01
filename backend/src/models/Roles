@@ -1,0 +1,20 @@
+const mongoose = require('mongoose');
+
+// Schema für das Rollenmodell
+const roleSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    unique: true, // Jede Rolle sollte einmalig sein
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  permissions: [String], // Ein Array von Berechtigungen, z.B. ["read", "write", "delete"]
+});
+
+// Modell für die Rollen
+const Role = mongoose.model('Role', roleSchema);
+
+module.exports = Role;

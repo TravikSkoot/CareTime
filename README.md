@@ -15,8 +15,6 @@ Willkommen bei CareTime, einer Anwendung zur Verwaltung von Arbeitsstunden im Se
 - [Contributing](#beitragen)
 - [Lizenz](#lizenz)
 
-
-
 ## Features
 
 - **Kundenverwaltung**: Hinzufügen, Bearbeiten und Löschen von Kundendaten.
