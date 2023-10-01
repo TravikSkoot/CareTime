@@ -1,4 +1,8 @@
-# CareTime - Seniorenserviceverwaltung
+# CareTime - Zeiterfassung und Verwaltung für Seniorenbetreuungsdienste
+
+**Hinweis:** Dieses Projekt ist derzeit in Arbeit (Work in Progress) und befindet sich in der Entwicklungsphase.
+
+---
 
 Willkommen bei CareTime, einer Anwendung zur Verwaltung von Arbeitsstunden im Seniorenservice. Diese Anwendung bietet eine einfache Möglichkeit, Arbeitsstunden für Mitarbeiter im Seniorenservice zu erfassen und zu verwalten.
 
@@ -85,3 +89,5 @@ Dieses Projekt ist unter der [GNU General Public License (GPL)](LICENSE.md) lize
 ---
 
 © 2023 Thiemo Küpper
+
+**Hinweis:** Dieses Projekt ist derzeit in Arbeit und wird weiterhin aktualisiert und erweitert. Wir freuen uns über Beiträge und Feedback von Mitwirkenden.
