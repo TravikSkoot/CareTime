@@ -10,8 +10,12 @@ mongoose.connect('mongodb://127.0.0.1:27017/CareTime', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
-.then(() => console.log('Erfolgreich mit der Datenbank verbunden'))
-.catch(err => console.log('Verbindungsfehler:', err));
+.then(() => {
+  console.log('Erfolgreich mit der Datenbank verbunden')
+})
+.catch(error => {
+  console.log('Verbindungsfehler:', error)
+});
 
 // Middleware, um JSON-Anfragen zu verarbeiten
 app.use(express.json());
