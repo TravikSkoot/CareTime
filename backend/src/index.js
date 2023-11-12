@@ -46,12 +46,13 @@ app.post('/api/arbeitsstunden', (req, res) => {
 
   neueArbeitsstunde.save()
     .then(() => res.json({ message: 'Neue Arbeitsstunde erfolgreich hinzugefügt.' }))
-    .catch(err => res.status(400).json({ message: 'Fehler beim Hinzufügen der Arbeitsstunde', error: err }));
+    .catch(error => res.status(400).json({ message: 'Fehler beim Hinzufügen der Arbeitsstunde', error: error }));
 });
 
 // Alle Arbeitsstunden abrufen
 app.get('/api/arbeitsstunden', (req, res) => {
   // Logik zum Abrufen aller Arbeitsstunden
+  res.json({ message: 'Hours retrieved' });
 });
 
 // Arbeitsstunde aktualisieren
